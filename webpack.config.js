@@ -23,15 +23,18 @@ module.exports = () => {
           use: [
             {   
               loader: MiniCssExtractPlugin.loader,
+              
               options: {
                 // you can specify a publicPath here
                 // by default it use publicPath in webpackOptions.output
-                publicPath: '../'
+                publicPath: '../',
+                fallback: 'style-loader'
               }
             },
             "css-loader"
           ]
-        }
+        },
+        {test: /\.(jpe?g|png|gif|svg)$/i, loader: "url-loader?name=public/images/[name].[ext]"}
       ]
     },
     plugins:[

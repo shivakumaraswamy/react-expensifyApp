@@ -828,3 +828,41 @@
   width: 15px;
   fill: #cacccd
 }
+html,body{
+    margin: 0;
+    padding: 0;
+}
+.is-active{
+    font-weight: bold;
+}
+h1{
+    color: #005bbc;
+    margin: 5px;
+}
+h4{color: #0d659b;}
+.login_container{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('/images/background.jpg');
+    background-size: cover;
+    text-align: center;
+}
+
+.login_wrapper{
+    padding: 30px 20px;
+    margin-top:13%;
+    border-radius: 5px;
+    background-color:#fbfbfb;
+    display: inline-block;
+    background-color: #FFFFFF;
+}
+
+.login_button{
+    background-color: #1c8c1c;
+    padding: 8px 10px;
+    font-size: 16px;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
