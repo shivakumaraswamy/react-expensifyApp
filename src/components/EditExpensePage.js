@@ -3,22 +3,23 @@ import { connect } from "react-redux";
 import ExpenseForm from "./ExpenseForm";
 import {startEditExpense} from '../actions/expenses';
 import {startRemoveExpense} from '../actions/expenses';
+import "../styles/style.css";
 
 const EditExpensePage = props => {
   console.log(props);
   return (
-    <div>
+    <div className="container">
       <ExpenseForm
       expense={props.expense}
         onSubmit={expense => {
             props.dispatch(startEditExpense(props.expense.id, expense));
-            props.history.push('/');
+            props.history.push('/dashboard');
           console.log("updated", expense);
         }}
       />
-      <button onClick={() => {
+      <button className="removeExpense" onClick={() => {
             props.dispatch(startRemoveExpense({id:props.expense.id}));
-            props.history.push('/');
+            props.history.push('/dashboard');
         }}>Remove</button>
     </div>
   );

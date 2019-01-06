@@ -2,9 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import moment from 'moment';
 import numeral from 'numeral';
+import "../styles/style.css";
 
 const ExpenseListItem = ({ id, description, amount, createdAt }) => (
-  <div>
+  <div className="listItemContainer">
     <Link to={`/edit/${id}`}>
       <h3>{description}</h3>
     </Link>

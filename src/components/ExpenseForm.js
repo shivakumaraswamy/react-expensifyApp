@@ -3,6 +3,7 @@ import moment from "moment";
 import "react-dates/initialize";
 import "react-dates/lib/css/_datepicker.css";
 import { SingleDatePicker } from "react-dates";
+import "../styles/style.css";
 
 const now = moment();
 console.log(now.format("MMM Do, YYYY"));
@@ -77,11 +78,12 @@ export default class ExpenseForm extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div className="container">
         {this.state.error && <p>{this.state.error}</p>}
         <form onSubmit={(event)=>{this.onSubmit(event)}}>
           <input
             type="text"
+            className="expense_description mr"
             placeholder="Description"
             value={this.state.description}
             onChange={this.onDescriptionChange}
@@ -90,10 +92,11 @@ export default class ExpenseForm extends React.Component {
           <input
             type="number"
             placeholder="Amount"
+            className="expense_description mr"
             value={this.state.amount}
             onChange={this.onAmountChange}
           />
-
+          <div className="datePickerContainer">
           <SingleDatePicker
             date={this.state.createdAt}
             onDateChange={this.onDateChange}
@@ -103,12 +106,14 @@ export default class ExpenseForm extends React.Component {
             isOutsideRange={() => false}
             id="SDP"
           />
+          </div>
           <textarea
             placeholder="Add a note for Expense (Optional)"
+            className="expense_description mr"
             value={this.state.note}
             onChange={this.onNoteChange}
           />
-          <button>Add Expense</button>
+          <button className="addExpense">Add Expense</button>
         </form>
       </div>
     );

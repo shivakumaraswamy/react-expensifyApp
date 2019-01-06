@@ -866,3 +866,25 @@ h4{color: #0d659b;}
     border-radius: 5px;
     cursor: pointer;
 }
+
+/* Loginpage ENDS */
+
+/* header page START */
+
+.container{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+.header_container{
+    height: 50px;
+    background-color: #1d4c84;
+}
+.dashboardLink{
+    float: left;
+    margin: 10px 5px;
+    color: #ffffff;
+}
+.logout{
+    float:right;
+    margin: 10px 5px;;
+}

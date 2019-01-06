@@ -2,6 +2,7 @@ import React from "react";
 import ExpenseForm from "./ExpenseForm";
 import { connect } from "react-redux";
 import { startAddExpense } from "../actions/expenses";
+import "../styles/style.css";
 
 export class AddExpensePage extends React.Component {
   constructor(props) {
@@ -14,8 +15,8 @@ export class AddExpensePage extends React.Component {
   }
   render() {
     return (
-      <div>
-        <h1>Expense form</h1>
+      <div className="container">
+        <h3 className="addExpenseHeading">Expense form</h3>
         <ExpenseForm onSubmit={this.onSubmit} />
       </div>
     );
